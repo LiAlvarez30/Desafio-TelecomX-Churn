@@ -17,6 +17,15 @@ Para asegurar la calidad de este análisis, utilicé las herramientas estándar 
 
 ---
 
+## 📂 Estructura del Repositorio
+Para mantener un estándar de ingeniería de datos, el repositorio está organizado de la siguiente manera:
+* `Analisis_Churn_TelecomX.ipynb`: Cuaderno principal con el pipeline de extracción, limpieza y EDA.
+* `telecom_churn_limpio.csv`: **Dataset procesado** y listo para ser usado en modelos de Machine Learning.
+* `requirements.txt`: Lista de dependencias necesarias para ejecutar el entorno.
+* `.gitignore`: Archivo para mantener el repositorio libre de archivos temporales.
+
+---
+
 ## 🏗️ Arquitectura del Proyecto (Pipeline ETL)
 El proyecto sigue un proceso riguroso de ingeniería de datos:
 
@@ -50,6 +59,7 @@ La matriz de correlación confirmó que la **permanencia (meses_contrato)** tien
    ```bash
    git clone https://github.com/LiAlvarez30/Desafio-TelecomX-Churn.git
 
+---
 
 ## 👨‍💻 Autor
 **Liliana Alvarez** *Data Engineer / Analyst*
