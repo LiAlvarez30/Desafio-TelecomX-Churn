@@ -1,51 +1,51 @@
-📡 Telecom X - Análisis de Evasión de Clientes (Churn)
+# 📡 Telecom X: Data Pipeline & Churn Analytics
+> **Transformando datos crudos en estrategias de retención de clientes.**
 
-Este proyecto forma parte del Challenge de Data Science del programa Oracle Next Education (ONE). El objetivo principal es identificar los factores que influyen en la pérdida de clientes de una empresa de telecomunicaciones y proponer estrategias basadas en datos para mejorar la retención.
+---
 
-🎯 Propósito del Proyecto
+## 🚀 El Desafío: ¿Por qué se van los clientes?
+Telecom X enfrentaba una fuga crítica de usuarios. Como parte de este proyecto, construí un flujo de trabajo profesional para extraer, limpiar y analizar el comportamiento de **7,032 clientes**. El objetivo fue encontrar los "puntos de ruptura" que explican por qué el **26.6%** de la base decide cancelar su servicio.
 
-Telecom X enfrenta una tasa de evasión significativa. Este análisis busca procesar datos demográficos, de servicios y financieros para descubrir patrones que expliquen por qué los clientes cancelan sus suscripciones. Los resultados obtenidos servirán como base para que el equipo de ciencia de datos desarrolle modelos predictivos.
+---
 
-🛠️ Tecnologías y Herramientas
-Lenguaje: Python 3.12
+## 🛠️ Stack Tecnológico
+Para asegurar la calidad de este análisis, utilicé las herramientas estándar de la industria:
+* **Lenguaje:** Python 3.12 🐍
+* **Manipulación de Datos:** Pandas (ETL & Data Wrangling) 📊
+* **Visualización:** Seaborn & Matplotlib (Análisis Estadístico) 📈
+* **Ingestión:** Requests (Consumo de API JSON) 🌐
 
-Bibliotecas: Pandas, Matplotlib, Seaborn, Requests.
+---
 
-Entorno: Google Colab.
+## 🏗️ Arquitectura del Proyecto (Pipeline ETL)
+El proyecto sigue un proceso riguroso de ingeniería de datos:
 
-Formato de datos: JSON (extraído vía API).
+1. **Extracción (Extract):** Ingestión de datos desde una API externa en formato JSON.
+2. **Transformación (Transform):**
+    * **Aplanamiento:** Conversión de estructuras anidadas a un DataFrame plano.
+    * **Limpieza:** Tratamiento de inconsistencias y eliminación de valores nulos.
+    * **Feature Engineering:** Creación de la métrica `cargos_diarios` para análisis de micro-gasto.
+3. **Análisis (EDA):** Identificación de patrones de evasión mediante visualizaciones avanzadas.
 
-📂 Estructura del Proyecto
-Analisis_Churn_TelecomX.ipynb: Cuaderno principal con el proceso de ETL, limpieza y análisis exploratorio (EDA).
+---
 
-README.md: Documentación del proyecto.
+## 💡 Hallazgos Críticos (Insights de Negocio)
 
-TelecomX_Data.json: Datos crudos (consumidos directamente desde la API del challenge).
+A través del análisis, detectamos que el perfil de **máximo riesgo** de fuga cumple con estas características:
 
-📊 Insights Principales
-A través del análisis visual y estadístico, se identificaron los siguientes puntos críticos:
+| Variable | Segmento de Alto Riesgo | Impacto Observado |
+| :--- | :--- | :--- |
+| **Contrato** | Mes a Mes | Mayor volumen de bajas (**1,655 casos**) |
+| **Tecnología** | Fibra Óptica | Tasa de evasión superior al DSL (**1,297 casos**) |
+| **Pago** | Cheque Electrónico | Método con mayor deserción (**1,071 casos**) |
+| **Soporte** | Sin Soporte Técnico | Punto crítico de pérdida de lealtad (**1,446 casos**) |
 
-Tasa de Evasión: El 26.6% de la base de clientes ha abandonado la compañía.
+### 🧠 Correlación Matemática
+La matriz de correlación confirmó que la **permanencia (meses_contrato)** tiene una relación negativa de **-0.35** con la evasión. Esto significa que los primeros **6 meses** son la "zona roja" donde la probabilidad de fuga es más alta.
 
-Fuga Temprana: La mayor densidad de cancelaciones ocurre en los primeros 6 meses de contrato.
+---
 
-Impacto del Contrato: Los clientes con contrato mes a mes representan la mayoría de las evasiones (1,655 casos).
-
-Factores de Riesgo: El uso de Fibra Óptica, el pago por Cheque Electrónico y la ausencia de Soporte Técnico son los principales indicadores de una posible evasión.
-
-Correlación Matemática: El tiempo de permanencia (tenure) es la variable con mayor influencia negativa en el Churn (-0.35), confirmando que a mayor lealtad temporal, menor riesgo de fuga.
-
-🚀 Instrucciones para Ejecutar
-
-Para replicar este análisis, sigue estos pasos:
-
-Clona este repositorio:
-
-Bash
-git clone https://github.com/LiAlvarez30/Desafio-TelecomX-Churn.git
-Sube el archivo .ipynb a Google Colab.
-
-Ejecuta las celdas en orden. El cuaderno descargará automáticamente los datos desde la API oficial.
-
-💡 Conclusiones
-Para reducir el churn, Telecom X debe enfocar sus esfuerzos en incentivar la migración a contratos anuales y mejorar la experiencia de soporte técnico en clientes de fibra óptica durante su primer año de servicio.
+## ⚙️ Cómo Ejecutar este Proyecto
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/LiAlvarez30/Desafio-TelecomX-Churn.git
