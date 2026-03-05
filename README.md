@@ -49,3 +49,9 @@ La matriz de correlación confirmó que la **permanencia (meses_contrato)** tien
 1. Clona el repositorio:
    ```bash
    git clone https://github.com/LiAlvarez30/Desafio-TelecomX-Churn.git
+
+
+## 👨‍💻 Autor
+**Liliana Alvarez** *Data Engineer / Analyst*
+
+> "Los datos no mienten, pero hay que saber preguntarles."
